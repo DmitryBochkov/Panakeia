@@ -1,0 +1,13 @@
+.promo {
+  @include clearfix;
+  margin: 0 -10px;
+  @include breakpoint($large) {
+    margin: 0 -15px;
+  }
+}
+.promo__item {
+  @include span(4 of 12);
+  @include breakpoint($large) {
+    @include gutters(30px);
+  }
+}
