@@ -1,5 +1,5 @@
 .top-nav {
-  padding-top: 30px;
+  padding-top: 20px;
   font-family: $font-primary;
 }
 .top-nav .logo {
@@ -49,6 +49,9 @@
   }
 }
 @include breakpoint($medium) {
+  .top-nav {
+    padding-top: 30px;
+  }
   .top-nav .logo {
     float: left;
   }
@@ -64,6 +67,7 @@
 @include breakpoint($large) {
   .top-nav {
     padding-top: 45px;
+    min-height: 148px;
   }
   .main-menu {
     margin-right: -15px;

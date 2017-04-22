@@ -1,13 +1,79 @@
 .promo {
   @include clearfix;
   margin: 0 -10px;
-  @include breakpoint($large) {
-    margin: 0 -15px;
+  @include breakpoint($small) {
+    margin-bottom: 50px;
   }
+  @include breakpoint($medium) {
+    margin-bottom: 70px;
+  }
+  @include breakpoint($large) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  color: $white;
+  background-color: inherit;
 }
 .promo__item {
-  @include span(4 of 12);
+  @include breakpoint($small) {
+    @include span(4);
+    @include gutters(20px);
+  }
   @include breakpoint($large) {
     @include gutters(30px);
+  }
+}
+.promo__item-img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 7px solid $color-bg;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.promo__item--dish-1 {
+  .promo__item-img {
+    background-image: url(../img/dish-1.jpg);
+  }
+}
+.promo__item--dish-2 {
+  .promo__item-img {
+    background-image: url(../img/dish-2.jpg);
+  }
+}
+.promo__item--dish-3 {
+  .promo__item-img {
+    background-image: url(../img/dish-3.jpg);
+  }
+}
+.promo__item-title {
+  margin: 10px 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 0.8;
+  @include breakpoint($small) {
+    margin: 15px 0;
+  }
+  @include breakpoint($medium) {
+    margin: 15px 0;
+    font-size: 30px;
+  }
+}
+.promo__item-content {
+  margin-bottom: 25px;
+  height: 125px;
+  overflow: hidden;
+  @include breakpoint($small) {
+    height: initial;
+    overflow: initial;
+  }
+  p {
+    margin: 10px 0;
+    font-family: $font-secondary;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 2;
   }
 }

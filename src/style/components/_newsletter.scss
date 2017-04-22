@@ -1,0 +1,25 @@
+.newsletter {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  min-height: 383px;
+  color: $white;
+  text-shadow: $text-shadow;
+  background: url(../img/bg-2.jpg) no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  .section-title {
+    margin: 15px 0;
+  }
+}
+.newsletter__form {
+  width: 100%;
+}
+.newsletter__form-content {
+  margin-bottom: 30px;
+  text-align: center;
+  p {
+    margin: 10px 0;
+  }
+}
