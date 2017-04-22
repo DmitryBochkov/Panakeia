@@ -11,11 +11,9 @@ body {
   background-color: $color-bg;
 }
 .container {
+  position: relative;
   @include container(90%);
   @include gutters(20px);
-  @include breakpoint($small) {
-    @include container(480px);
-  }
   @include breakpoint($medium) {
     @include container(768px);
   }

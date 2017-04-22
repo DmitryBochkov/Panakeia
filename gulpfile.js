@@ -55,19 +55,22 @@ gulp.task('html:build', function () {
 
 gulp.task('js:build', function () {
   gulp.src(path.src.js) //Найдем наш main файл
+    .pipe(rigger()) //Прогоним через rigger
+    .pipe(uglify()) //Сожмем наш js
     .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
     .pipe(reload({stream: true})); //И перезагрузим сервер
 });
 
 gulp.task('style:build', function () {
   gulp.src(path.src.style) //Выберем наш main.scss
-    .pipe(sass({outputStyle: 'expanded'})) //Скомпилируем
+    .pipe(sass()) //Скомпилируем
      .on('error', function (err) {
         console.error('Error!', err.message);
     })
     .pipe(prefixer({
             browsers: ['last 30 versions']
         })) //Добавим вендорные префиксы
+    .pipe(cssmin()) //Сожмем
     .pipe(gulp.dest(path.build.css)) //И в build
     .pipe(reload({stream: true}));
 });
