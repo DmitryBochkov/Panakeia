@@ -95,7 +95,7 @@
         </article>
       </div>
     </section>
-    <section class="newsletter">
+    <section class="newsletter section-overlay">
       <div class="container">
         <h2 class="section-title">Newsletter</h2>
         <div class="newsletter__form">
@@ -112,25 +112,25 @@
     <section class="events">
       <div class="container">
         <div class="events__item events__item-1">
+          <div class="events__item-img">
+            <img src="img/dish-6.jpg" alt="Events image 1">
+          </div>
           <div class="events__item-content">
             <h3 class="events__title">Event 1</h3>
             <p>Nam accumsan nunc sit amet elementum sollicitudin. Integer vel lacus eget tortor lobortis tincidunt sed eu dolor. Phasellus cursus augue ac pulvinar cursus.</p>
             <p>Quisque ut erat ornare, feugiat turpis a, fringilla felis. Nulla molestie lorem et orci sagittis, et accumsan ex porta.</p>
             <a href="#0" class="btn btn--signup">Sign up</a>
           </div>
-          <div class="events__item-img">
-            <img src="" alt="Events image 1">
-          </div>
         </div>
         <div class="events__item events__item-2">
+          <div class="events__item-img">
+            <img src="img/dish-7.jpg" alt="Events image 2">
+          </div>
           <div class="events__item-content">
             <h3 class="events__title">Event 2</h3>
             <p>Nam accumsan nunc sit amet elementum sollicitudin. Integer vel lacus eget tortor lobortis tincidunt sed eu dolor. Phasellus cursus augue ac pulvinar cursus.</p>
             <p>Quisque ut erat ornare, feugiat turpis a, fringilla felis. Nulla molestie lorem et orci sagittis, et accumsan ex porta.</p>
             <a href="#0" class="btn btn--signup">Sign up</a>
-          </div>
-          <div class="events__item-img">
-            <img src="" alt="Events image 1">
           </div>
         </div>
       </div>
@@ -138,7 +138,12 @@
     <footer>
       <div class="container">
         <section class="footer-menu">
-          <ul class="footer-menu__column">
+          <ul class="tabs">
+            <li><a href="tab-1" class="active">Menu 1</a></li>
+            <li><a href="tab-2">Menu 2</a></li>
+            <li><a href="tab-3">Menu 3</a></li>
+          </ul>
+          <ul id="tab-1" class="footer-menu__column visible">
             <li><a href="#0">Ad litora torquent</a></li>
             <li><a href="#0">Per conubia</a></li>
             <li><a href="#0">Nostra</a></li>
@@ -146,7 +151,7 @@
             <li><a href="#0">Himenaeos</a></li>
             <li><a href="#0">In consectetur</a></li>
           </ul>
-          <ul class="footer-menu__column">
+          <ul id="tab-2" class="footer-menu__column">
             <li><a href="#0">Taciti sociosqu</a></li>
             <li><a href="#0">Ad litora torquent</a></li>
             <li><a href="#0">Per conubia</a></li>
@@ -155,7 +160,7 @@
             <li><a href="#0">Nisi sed blandit</a></li>
             <li><a href="#0">Tincidunt</a></li>
           </ul>
-          <ul class="footer-menu__column">
+          <ul id="tab-3" class="footer-menu__column">
             <li><a href="#0">Nostra</a></li>
             <li><a href="#0">Per conubia</a></li>
             <li><a href="#0">Himenaeos</a></li>
@@ -164,10 +169,12 @@
             <li><a href="#0">Tincidunt</a></li>
           </ul>
         </section>
-        <div class="copyright">
-          Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-        </div>
       </div>
+      <section class="copyright section-overlay">
+        <div class="copyright__content">
+          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </div>
+      </section>
     </footer>
 
     <script src="js/main.js"></script>

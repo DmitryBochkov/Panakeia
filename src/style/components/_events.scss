@@ -1,0 +1,61 @@
+.events {
+  padding-top: 10px;
+  padding-bottom: 65px;
+}
+.events__item {
+  margin-left: -10px;
+  margin-right: -10px;
+  @include breakpoint($large) {
+    margin-left: -15px;
+    margin-right: -15px;
+  };
+  @include clearfix;
+  color: $dark;
+  .btn--signup {
+    margin: 0 auto;
+    background-color: $orange;
+    color: $white;
+  }
+}
+.events__title {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: $font-primary;
+}
+.events__item-content {
+  @include breakpoint($small) {
+    @include span(6);
+    @include gutters(20px);
+  };
+  @include breakpoint($medium) {
+    @include span(7);
+  };
+  @include breakpoint($large) {
+    @include gutters(30px);
+  };
+}
+.events__item-img {
+  padding-top: 30px;
+  @include breakpoint($small) {
+    padding-top: 115px;
+    @include span(6);
+    @include gutters(20px);
+  };
+  @include breakpoint($medium) {
+    @include span(5);
+  };
+  @include breakpoint($large) {
+    padding-top: 40px;
+    @include gutters(30px);
+  };
+}
+.events__item-2 {
+  .btn--signup {
+    background-color: $fiord;
+  }
+  @include breakpoint($small) {
+    .events__item-img {
+      float: right;
+    }
+  };
+}

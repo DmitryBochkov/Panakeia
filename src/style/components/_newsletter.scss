@@ -15,11 +15,57 @@
 }
 .newsletter__form {
   width: 100%;
+  max-width: 545px;
+  margin: 0 auto;
+  input {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  input[type="email"] {
+    height: 54px;
+    padding: 10px 40px;
+    color: $light-grey;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 27px;
+    @include input-placeholder {
+      color: $light-grey;
+      font-family: $font-primary;
+      font-size: 18px;
+      font-weight: 400;
+      text-shadow: $text-shadow;
+    };
+  }
 }
 .newsletter__form-content {
   margin-bottom: 30px;
   text-align: center;
   p {
     margin: 10px 0;
+  }
+}
+
+@include breakpoint($small) {
+  .newsletter__form {
+    max-width: 545px;
+    width: 545px;
+    input {
+      display: inline-block;
+    }
+    input[type="email"] {
+      max-width: 509px;
+      width: 509px;
+      height: 54px;
+      padding-right: 216px;
+    }
+    input[type="submit"] {
+      max-width: 211px;
+      width: 211px;
+      margin-left: -211px;
+    }
   }
 }

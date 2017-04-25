@@ -1,0 +1,107 @@
+footer {
+  background-color: $light-orange;
+}
+.footer-menu {
+  padding: 20px 0;
+  margin: 0 -10px;
+  @include clearfix;
+  @include breakpoint($small) {
+    padding: 50px 0;
+  };
+  @include breakpoint($large) {
+    padding: 90px 0;
+    margin: 0 -15px;
+  };
+  background-color: inherit;
+  color: $white;
+  font-size: 18px;
+  line-height: 2;
+}
+.tabs,
+.footer-menu__column {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.tabs li {
+  display: inline-block;
+}
+.tabs a,
+.footer-menu__column a {
+  color: inherit;
+  text-decoration: none;
+}
+.footer-menu__column a:hover {
+  text-decoration: underline;
+}
+.tabs a {
+  padding: 10px;
+  position: relative;
+  @include breakpoint($xsmall) {
+    padding: 10px 20px;
+  };
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+}
+.tabs .active {
+  font-weight: bold;
+  &:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+.tabs {
+  margin-bottom: 20px;
+  @include breakpoint($small) {
+    display: none;
+  };
+}
+.footer-menu__column {
+  display: none;
+  @include breakpoint($small) {
+    display: block;
+    @include span(4);
+    @include gutters(20px);
+  };
+  @include breakpoint($large) {
+    @include gutters(30px);
+  };
+}
+.footer-menu__column.visible {
+  display: block;
+}
+
+.copyright {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 375px;
+  background-color: $dark;
+  background-image: url(../img/bg-1.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.copyright__content {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: $white;
+  font-size: 18px;
+  font-weight: 300;
+  text-shadow: $text-shadow;
+}
