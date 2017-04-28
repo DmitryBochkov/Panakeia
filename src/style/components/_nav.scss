@@ -2,12 +2,85 @@
   padding-top: 20px;
   font-family: $font-primary;
 }
-.top-nav .logo {
-  margin-bottom: 15px;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1;
+.top-nav {
+  .logo {
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    perspective: 800px;
+    span {
+      display:inline-block;
+      margin-left: -3px;
+      transform-origin: 50% 70%;
+    }
+
+  }
 }
+
+span:nth-child(1) {
+  animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) both;
+}
+
+span:nth-child(2) {
+  animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .2s both;
+}
+
+span:nth-child(3) {
+ animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .4s both;
+}
+
+span:nth-child(4) {
+ animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .6s both;
+}
+
+span:nth-child(5) {
+  animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .8s both;
+ }
+
+span:nth-child(6) {
+  animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) 1s both;
+}
+
+span:nth-child(7) {
+  animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) 1.2s both;
+}
+span:nth-child(8) {
+  animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) 2.5s both, spin 1s 2.5s ease, swing 2s cubic-bezier(0.45, 0.03, 0.51, 0.95) forwards 3.5s;
+}
+@keyframes spin {
+  100%{transform: rotateX(1turn);}
+}
+@keyframes flipUp {
+  from {
+    transform: rotateX(90deg);
+    color: $orange;
+  }
+  to {
+    tranform: rotateX(0deg);
+    color: $color-main;
+  }
+}
+@keyframes swing {
+  20% {
+    color: $orange;
+    transform: rotateY(-45deg);
+  }
+  40% {
+    transform: rotateY(45deg);
+  }
+  60% {
+    transform: rotateY(-45deg);
+  }
+  80% {
+    transform: rotateY(45deg);
+  }
+  100% {
+    color: $color-main;
+    transform: rotateY(0);
+  }
+}
+
 .main-menu {
   display: none;
   margin: 0;

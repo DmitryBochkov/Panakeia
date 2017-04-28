@@ -10,7 +10,9 @@
   }
 }
 .news__item {
+  position: relative;
   margin-bottom: 40px;
+  z-index: 15;
   @include breakpoint($small) {
     @include span(4);
   }
@@ -31,4 +33,22 @@
     font-weight: 300;
     line-height: 2;
   }
+}
+.news__item-price {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  z-index: 1;
+}
+.news__item-price h3 {
+  margin: 10px 0;
+  padding: 7px 0;
+  background-color: rgba($orange, 0.8);
+  color: $white;
+}
+.news__item:hover .news__item-price {
+  opacity: 1;
 }

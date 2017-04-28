@@ -15,6 +15,7 @@
   background-color: inherit;
 }
 .promo__item {
+  position: relative;
   @include breakpoint($small) {
     @include span(4);
     @include gutters(20px);
@@ -24,6 +25,7 @@
   }
 }
 .promo__item-img {
+  position: relative;
   width: 100px;
   height: 100px;
   margin: 0 auto;
@@ -32,6 +34,14 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: all .5s ease;
+}
+.promo__item:hover .promo__item-img {
+  transform: scale(1.3) translateY(-10px);
+  @include breakpoint($small) {
+    transform: scale(1.7) translateY(-20px);
+
+  };
 }
 .promo__item--dish-1 {
   .promo__item-img {
