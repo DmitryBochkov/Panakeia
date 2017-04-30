@@ -1,7 +1,11 @@
 //= jquery-1.12.4.min.js
+//= parallax.min.js
+//= ../libs/kissui.scrollanim/build/scrollanim.min.js
 
 $(document).ready(function(){
   $('body').removeClass('no-js');
+
+  $('header').parallax({imageSrc: '../img/header-bg.jpg'});
 
   var mainMenu = $('#mainMenu');
   var navButton = $('#navButton');
@@ -19,6 +23,15 @@ $(document).ready(function(){
       mainMenu.removeClass('opened');
     }
   });
+
+
+  var eventImgs = document.getElementsByClassName('events__item-img');
+  for (var i = 0; i < eventImgs.length; i++) {
+    // console.log(eventImgs[i]);
+    kissuiScrollAnim.add(eventImgs[i], {
+      'in': 'fadeIn'
+    });
+  }
 });
 
 // Add event listeners for document click

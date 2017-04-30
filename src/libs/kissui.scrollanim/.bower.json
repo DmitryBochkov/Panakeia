@@ -1,0 +1,43 @@
+{
+  "name": "kissui.scrollanim",
+  "homepage": "http://scrollanim.kissui.io",
+  "authors": [
+    "Afshin Mehrabani <afshin.meh@gmail.com>"
+  ],
+  "description": "CSS3 scroll animation library",
+  "main": "index.js",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [
+    "css3",
+    "animation",
+    "scroll",
+    "html5",
+    "anim",
+    "kissui"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "kissui.position": "latest"
+  },
+  "version": "0.3.0",
+  "_release": "0.3.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.0",
+    "commit": "b97594e9c63723f1d0bfba524c90e36bc67d40f0"
+  },
+  "_source": "https://github.com/usablica/kissui.scrollanim.git",
+  "_target": "^0.3.0",
+  "_originalSource": "kissui.scrollanim",
+  "_direct": true
+}

@@ -2,6 +2,9 @@
 @import "../libs/normalize-css/normalize";
 @import "../libs/susy/sass/susy";
 @import "../libs/breakpoint-sass/stylesheets/breakpoint";
+@import "../libs/animate.css/source/base";
+@import "../libs/animate.css/source/fading_entrances/fadeIn";
+// @import "../libs/kissui.scrollanim/scrollanim";
 
 //base
 @import "mixins";
