@@ -1,8 +1,26 @@
+body.fixed-nav {
+  padding-top: 80px;
+  @include breakpoint($large) {
+    padding-top: 160px;
+  };
+  .top-nav {
+    padding-top: 25px;
+    box-shadow: 0 5px 0 rgba($orange, 0.25);
+    min-height: 80px;
+  }
+}
 .top-nav {
-  padding-top: 20px;
+  padding-top: 45px;
+  min-height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   font-family: $font-primary;
   background-color: $color-bg;
-  
+  transition: all 0.1s ease-in;
+
   .logo {
     margin-bottom: 15px;
     font-size: 30px;
@@ -107,7 +125,9 @@ span:nth-child(8) {
   transition: all 0.2s ease-in;
 }
 
-.main-menu li a:hover {
+.main-menu li a:hover,
+.main-menu li a:active,
+.main-menu li a:focus {
   color: $white;
   background-color: #dd4b2b;
 }
@@ -120,10 +140,15 @@ span:nth-child(8) {
   .main-menu li {
     float: left;
   }
+  .main-menu li a.active {
+    color: $color-main;
+    background-color: #dd4b2b;
+  }
 }
 @include breakpoint($medium) {
   .top-nav {
     padding-top: 30px;
+    min-height: 100px;
   }
   .top-nav .logo {
     float: left;
