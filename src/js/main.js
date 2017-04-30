@@ -5,7 +5,7 @@
 $(document).ready(function(){
   $('body').removeClass('no-js');
 
-  $('header').parallax({imageSrc: '../img/header-bg.jpg'});
+  $('header').parallax({imageSrc: 'img/header-bg.jpg'});
 
   var mainMenu = $('#mainMenu');
   var navButton = $('#navButton');
