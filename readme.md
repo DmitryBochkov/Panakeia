@@ -1,4 +1,4 @@
-#Cafe landing page
+# Cafe landing page
 
 Created using custom Susy grid. Adapted the desktop design to mobile and tablet.
 
